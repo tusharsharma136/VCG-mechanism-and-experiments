@@ -1,0 +1,24 @@
+{
+  "bids": [
+    {
+      "bidder_id": "A1",
+      "value": 100,
+      "space_type": "b"
+    },
+    {
+      "bidder_id": "B1",
+      "value": 60,
+      "space_type": "t"
+    },
+    {
+      "bidder_id": "C1",
+      "value": 50,
+      "space_type": "s"
+    },
+    {
+      "bidder_id": "D1",
+      "value": 80,
+      "space_type": "b"
+    }
+  ]
+}

@@ -1,0 +1,318 @@
+{
+  "sybil_attack": {
+    "original": {
+      "test_name": "Sybil Attack - Original",
+      "bids": [
+        {
+          "bidder_id": "A1",
+          "value": 100,
+          "space_type": "b"
+        },
+        {
+          "bidder_id": "B1",
+          "value": 80,
+          "space_type": "t"
+        },
+        {
+          "bidder_id": "C1",
+          "value": 70,
+          "space_type": "s"
+        }
+      ],
+      "vcg_results": {
+        "allocation": {
+          "top": "B1",
+          "sidebar": "C1"
+        },
+        "payments": {
+          "B1": 30,
+          "C1": 20
+        },
+        "total_revenue": 50
+      },
+      "spa_results": {
+        "winner": "A1",
+        "payment": 80
+      },
+      "revenue_ratio": 1.6
+    },
+    "sybil": {
+      "test_name": "Sybil Attack - Split Identity",
+      "bids": [
+        {
+          "bidder_id": "A1",
+          "value": 60,
+          "space_type": "t"
+        },
+        {
+          "bidder_id": "A2",
+          "value": 50,
+          "space_type": "s"
+        },
+        {
+          "bidder_id": "B1",
+          "value": 80,
+          "space_type": "t"
+        },
+        {
+          "bidder_id": "C1",
+          "value": 70,
+          "space_type": "s"
+        }
+      ],
+      "vcg_results": {
+        "allocation": {
+          "top": "B1",
+          "sidebar": "C1"
+        },
+        "payments": {
+          "B1": 60,
+          "C1": 50
+        },
+        "total_revenue": 110
+      },
+      "spa_results": {
+        "winner": "B1",
+        "payment": 70
+      },
+      "revenue_ratio": 0.6363636363636364
+    }
+  },
+  "revenue_comparison": [
+    {
+      "test_name": "High Value Both Slots",
+      "bids": [
+        {
+          "bidder_id": "A1",
+          "value": 200,
+          "space_type": "b"
+        },
+        {
+          "bidder_id": "B1",
+          "value": 180,
+          "space_type": "b"
+        },
+        {
+          "bidder_id": "C1",
+          "value": 100,
+          "space_type": "t"
+        },
+        {
+          "bidder_id": "D1",
+          "value": 90,
+          "space_type": "s"
+        }
+      ],
+      "vcg_results": {
+        "allocation": {
+          "top": "A1",
+          "sidebar": "A1"
+        },
+        "payments": {
+          "A1": 190
+        },
+        "total_revenue": 190
+      },
+      "spa_results": {
+        "winner": "A1",
+        "payment": 180
+      },
+      "revenue_ratio": 0.9473684210526315
+    },
+    {
+      "test_name": "Split Allocation Optimal",
+      "bids": [
+        {
+          "bidder_id": "A1",
+          "value": 120,
+          "space_type": "t"
+        },
+        {
+          "bidder_id": "B1",
+          "value": 110,
+          "space_type": "s"
+        },
+        {
+          "bidder_id": "C1",
+          "value": 150,
+          "space_type": "b"
+        },
+        {
+          "bidder_id": "D1",
+          "value": 140,
+          "space_type": "b"
+        }
+      ],
+      "vcg_results": {
+        "allocation": {
+          "top": "A1",
+          "sidebar": "B1"
+        },
+        "payments": {
+          "A1": 40,
+          "B1": 30
+        },
+        "total_revenue": 70
+      },
+      "spa_results": {
+        "winner": "C1",
+        "payment": 140
+      },
+      "revenue_ratio": 2.0
+    },
+    {
+      "test_name": "Mixed Preferences",
+      "bids": [
+        {
+          "bidder_id": "A1",
+          "value": 90,
+          "space_type": "t"
+        },
+        {
+          "bidder_id": "B1",
+          "value": 85,
+          "space_type": "s"
+        },
+        {
+          "bidder_id": "C1",
+          "value": 160,
+          "space_type": "b"
+        },
+        {
+          "bidder_id": "D1",
+          "value": 80,
+          "space_type": "t"
+        },
+        {
+          "bidder_id": "E1",
+          "value": 75,
+          "space_type": "s"
+        }
+      ],
+      "vcg_results": {
+        "allocation": {
+          "top": "A1",
+          "sidebar": "B1"
+        },
+        "payments": {
+          "A1": 80,
+          "B1": 75
+        },
+        "total_revenue": 155
+      },
+      "spa_results": {
+        "winner": "C1",
+        "payment": 90
+      },
+      "revenue_ratio": 0.5806451612903226
+    }
+  ],
+  "truthful_bidding": {
+    "true_value": 150,
+    "truthful": {
+      "test_name": "Truthful Bidding",
+      "bids": [
+        {
+          "bidder_id": "A1",
+          "value": 150,
+          "space_type": "b"
+        },
+        {
+          "bidder_id": "B1",
+          "value": 100,
+          "space_type": "b"
+        },
+        {
+          "bidder_id": "C1",
+          "value": 80,
+          "space_type": "t"
+        }
+      ],
+      "vcg_results": {
+        "allocation": {
+          "top": "A1",
+          "sidebar": "A1"
+        },
+        "payments": {
+          "A1": 100
+        },
+        "total_revenue": 100
+      },
+      "spa_results": {
+        "winner": "A1",
+        "payment": 100
+      },
+      "revenue_ratio": 1.0
+    },
+    "overbid": {
+      "test_name": "Overbidding",
+      "bids": [
+        {
+          "bidder_id": "A1",
+          "value": 180.0,
+          "space_type": "b"
+        },
+        {
+          "bidder_id": "B1",
+          "value": 100,
+          "space_type": "b"
+        },
+        {
+          "bidder_id": "C1",
+          "value": 80,
+          "space_type": "t"
+        }
+      ],
+      "vcg_results": {
+        "allocation": {
+          "top": "A1",
+          "sidebar": "A1"
+        },
+        "payments": {
+          "A1": 100.0
+        },
+        "total_revenue": 100.0
+      },
+      "spa_results": {
+        "winner": "A1",
+        "payment": 100
+      },
+      "revenue_ratio": 1.0
+    },
+    "underbid": {
+      "test_name": "Underbidding",
+      "bids": [
+        {
+          "bidder_id": "A1",
+          "value": 120.0,
+          "space_type": "b"
+        },
+        {
+          "bidder_id": "B1",
+          "value": 100,
+          "space_type": "b"
+        },
+        {
+          "bidder_id": "C1",
+          "value": 80,
+          "space_type": "t"
+        }
+      ],
+      "vcg_results": {
+        "allocation": {
+          "top": "A1",
+          "sidebar": "A1"
+        },
+        "payments": {
+          "A1": 100.0
+        },
+        "total_revenue": 100.0
+      },
+      "spa_results": {
+        "winner": "A1",
+        "payment": 100
+      },
+      "revenue_ratio": 1.0
+    }
+  }
+}
